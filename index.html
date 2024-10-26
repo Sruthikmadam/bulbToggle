@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulbOn</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        .bulb{
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction: column;
+            margin-top: 150px;  
+        }
+        button{
+            background: green;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="bulb">
+    <img src="bulbOn1.jpg"/>
+    <button >Switch Off</button>
+    </div>
+
+<script>
+    const buttons=document.querySelector("button");
+    const imag=document.querySelector("img");
+    buttons.addEventListener("click" ,(e)=>{
+        if(buttons.innerHTML=="Switch Off"){
+            imag.src="bulbOff1.jpg";
+            buttons.innerHTML="Switch On";
+
+        }
+        else{
+            imag.src="bulbOn1.jpg";
+            buttons.innerHTML="Switch Off";
+        }
+    }
+    )
+</script>
+</body>
+</html>
